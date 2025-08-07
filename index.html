@@ -1,0 +1,282 @@
+﻿<!--
+    This is a complete, self-contained HTML file for a Virtual Assistant's portfolio website.
+    It is designed to be clean, professional, and fully responsive.
+    
+    The website includes the following sections:
+    - Hero: A bold introduction with a call-to-action.
+    - About Me: A brief professional biography.
+    - Services: A list of the key services offered as a Virtual Assistant.
+    - Portfolio: A section to showcase previous work (using placeholders for now).
+    - Contact: A contact form for potential clients.
+
+    - Tailwind CSS is used for all styling to ensure a modern and responsive design.
+    - The color palette is a professional, minimalist mix of dark gray, white, and a subtle accent.
+    - The "Inter" font is used for a clean, modern look.
+    - Simple JavaScript is included to handle the contact form submission.
+-->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lochie Angel Balio | Virtual Assistant</title>
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #070707;
+            --secondary-color: #a9a9a9;
+            --off-white: #f7f7f7;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .services-bg {
+            background-color: var(--off-white);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #d3d3d3;
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Lochie.</a>
+            <nav class="space-x-8 hidden md:flex">
+                <a href="#about" class="nav-link text-gray-600">About Me</a>
+                <a href="#services" class="nav-link text-gray-600">Services</a>
+                <a href="#portfolio" class="nav-link text-gray-600">Portfolio</a>
+                <a href="#contact" class="nav-link text-gray-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center pt-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate-fade-in-up">
+                Your Dedicated Virtual Assistant.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8 animate-fade-in-up delay-200">
+                I handle your day-to-day tasks so you can focus on what truly matters for your business.
+            </p>
+            <a href="#services" class="btn-primary inline-block px-8 py-3 rounded-full font-semibold md:text-lg animate-fade-in-up delay-400">
+                Explore My Services
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 md:py-32">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">About Me</h2>
+            <div class="text-lg text-gray-700 space-y-6">
+                <p>Hello! I'm Lochie Angel Balio, a dedicated Virtual Assistant with a passion for helping businesses succeed. With a strong foundation in **e-commerce management**, I've expanded my skills to provide comprehensive administrative and operational support.</p>
+                <p>My expertise covers a wide range of tasks, from **lead generation** and **calendar management using Calendly** to **data listing** and general administrative support. I am also a skilled **Shopify VA**, proficient in creating SEO-optimized product listings, managing inventory, and setting up marketing campaigns.</p>
+                <p>My goal is to be a reliable and efficient extension of your team, handling the daily grind so you can focus on your business's growth and strategic vision. I am committed to delivering high-quality work with meticulous attention to detail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-bg py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">My Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Service Card 1: Lead Generation -->
+                <div class="card bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Lead Generation</h3>
+                    <p class="text-gray-600 mb-4">
+                        I can research and identify potential clients, building a high-quality list to grow your business pipeline.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>- Prospect Research</li>
+                        <li>- Database Management</li>
+                        <li>- Targeted List Building</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2: Administrative Tasks -->
+                <div class="card bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Administrative Tasks</h3>
+                    <p class="text-gray-600 mb-4">
+                        From data entry to file organization, I handle routine office tasks to keep your business running smoothly.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>- Data Entry & Listing</li>
+                        <li>- Document Management</li>
+                        <li>- Email Management</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3: Appointment Setting -->
+                <div class="card bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Appointment Setting</h3>
+                    <p class="text-gray-600 mb-4">
+                        I manage your calendar and handle client scheduling, ensuring your time is organized and efficient.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>- Calendly Integration</li>
+                        <li>- Calendar Coordination</li>
+                        <li>- Meeting Reminders</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 4: Shopify VA -->
+                <div class="card bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Shopify VA</h3>
+                    <p class="text-gray-600 mb-4">
+                        Specialized e-commerce support, from creating SEO-optimized product listings to managing inventory and apps.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>- Product Listing & SEO</li>
+                        <li>- Inventory & App Management</li>
+                        <li>- Marketing & Discounts</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 5: Data Listing -->
+                <div class="card bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-3">Data Listing</h3>
+                    <p class="text-gray-600 mb-4">
+                        I can efficiently organize and list data on various platforms with a focus on accuracy and detail.
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>- Product & Service Data</li>
+                        <li>- Spreadsheet Management</li>
+                        <li>- Accurate Data Entry</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 md:py-32">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">My Work</h2>
+            <p class="text-center text-gray-600 mb-12">
+                Here are a few examples of projects I've worked on.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Portfolio Item 1 (Placeholder) -->
+                <div class="relative bg-gray-100 h-64 rounded-xl flex items-center justify-center overflow-hidden">
+                    <img src="https://placehold.co/600x400/f0f0f0/cccccc?text=Project+1+Screenshot" alt="Project 1 Screenshot" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center">
+                        <h3 class="text-xl font-bold">Comprehensive Store Setup</h3>
+                        <p class="text-sm">Store Design & Operations</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 (Placeholder) -->
+                <div class="relative bg-gray-100 h-64 rounded-xl flex items-center justify-center overflow-hidden">
+                    <img src="https://placehold.co/600x400/f0f0f0/cccccc?text=Project+2+Screenshot" alt="Project 2 Screenshot" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center">
+                        <h3 class="text-xl font-bold">Marketing & Admin Support</h3>
+                        <p class="text-sm">Lead Generation & Campaigns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="services-bg py-20 md:py-32">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Get in Touch</h2>
+            <p class="text-center text-gray-600 mb-8">
+                Ready to take your business to the next level? Fill out the form below to connect.
+            </p>
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                    <input type="text" id="name" name="name" required
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required
+                              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full px-4 py-3 rounded-md font-semibold">
+                    Send Message
+                </button>
+                <div id="form-message" class="mt-4 text-center text-sm font-medium text-gray-600 hidden"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Lochie Angel Balio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageDiv = document.getElementById('form-message');
+            messageDiv.textContent = 'Thank you for your message! I will get back to you soon.';
+            messageDiv.classList.remove('hidden');
+            messageDiv.classList.add('text-green-500');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
