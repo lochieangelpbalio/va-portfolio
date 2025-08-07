@@ -1,12 +1,12 @@
 ﻿<!--
     This is a complete, self-contained HTML file for a Virtual Assistant's portfolio website.
-    It is designed to be clean, professional, and fully responsive.
+    It has been updated to include a horizontal scrolling gallery using the screenshots provided by the user.
     
     The website includes the following sections:
     - Hero: A bold introduction with a call-to-action.
     - About Me: A brief professional biography.
     - Services: A list of the key services offered as a Virtual Assistant.
-    - Portfolio: A section to showcase previous work (using placeholders for now).
+    - Portfolio: A horizontal scrolling gallery to showcase previous work.
     - Contact: A contact form for potential clients.
 
     - Tailwind CSS is used for all styling to ensure a modern and responsive design.
@@ -200,32 +200,96 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section (with horizontal scroll) -->
     <section id="portfolio" class="py-20 md:py-32">
-        <div class="container mx-auto px-6 max-w-5xl">
+        <div class="container mx-auto px-6 max-w-6xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">My Work</h2>
             <p class="text-center text-gray-600 mb-12">
-                Here are a few examples of projects I've worked on.
+                Here are a few examples of projects I've worked on. Scroll to see more!
             </p>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Portfolio Item 1 (Placeholder) -->
-                <div class="relative bg-gray-100 h-64 rounded-xl flex items-center justify-center overflow-hidden">
-                    <img src="https://placehold.co/600x400/f0f0f0/cccccc?text=Project+1+Screenshot" alt="Project 1 Screenshot" class="absolute inset-0 w-full h-full object-cover">
+            <!-- Horizontal scroll container -->
+            <div class="flex overflow-x-scroll scroll-snap-x gap-8 pb-4" style="-webkit-overflow-scrolling: touch;">
+
+                <!-- Portfolio Item 1: Shopify Store Homepage -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035247.jpg-e79f7264-0faf-4873-bb9b-c5fbd6e2ca88" alt="Mock Shopify Website Homepage" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black opacity-40"></div>
-                    <div class="relative text-white text-center">
-                        <h3 class="text-xl font-bold">Comprehensive Store Setup</h3>
-                        <p class="text-sm">Store Design & Operations</p>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Mock Shopify Website</h3>
+                        <p class="text-sm">Store Setup & Design</p>
                     </div>
                 </div>
-                <!-- Portfolio Item 2 (Placeholder) -->
-                <div class="relative bg-gray-100 h-64 rounded-xl flex items-center justify-center overflow-hidden">
-                    <img src="https://placehold.co/600x400/f0f0f0/cccccc?text=Project+2+Screenshot" alt="Project 2 Screenshot" class="absolute inset-0 w-full h-full object-cover">
+
+                <!-- Portfolio Item 2: New Collection Pop-up -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035302.jpg-58df8357-a3cd-4a8e-8ab5-8b66e76cb5c7" alt="Shopify New Collection Pop-up" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black opacity-40"></div>
-                    <div class="relative text-white text-center">
-                        <h3 class="text-xl font-bold">Marketing & Admin Support</h3>
-                        <p class="text-sm">Lead Generation & Campaigns</p>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Pop-Up & Marketing</h3>
+                        <p class="text-sm">Campaigns & Promotions</p>
                     </div>
                 </div>
+
+                <!-- Portfolio Item 3: Apparel Section -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035313.jpg-5060b76c-6e16-4505-b945-69fbc91d817f" alt="Shopify Apparel Section" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Curated Product Page</h3>
+                        <p class="text-sm">Design & Content</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4: Plaid Shirt Product Page -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035419.jpg-c513578d-e40f-4f16-8089-e72a9bfa9867" alt="Shopify Plaid Shirt Product Page" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Detailed Product Listing</h3>
+                        <p class="text-sm">SEO & Variants</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5: Checkout Cart -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035435.jpg-e0bbb0b2-a607-4222-b1f2-e6b1f6393cbb" alt="Shopify Checkout Cart" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Seamless Checkout</h3>
+                        <p class="text-sm">Fulfillment & Shipping</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6: Tops Collection -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035346.jpg-0aa4f18c-67df-4fc8-b9d6-53b28e093201" alt="Shopify Tops Collection Page" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Organized Collections</h3>
+                        <p class="text-sm">Filtering & Navigation</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 7: Outerwear Collection -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035355.jpg-72bf5ba4-a68d-43be-bce4-2400a6f8332f" alt="Shopify Outerwear Collection Page" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Curated Collections</h3>
+                        <p class="text-sm">Merchandising & Layout</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 8: About Us Page -->
+                <div class="flex-none w-80 h-72 rounded-xl flex-shrink-0 relative overflow-hidden card scroll-snap-align-start">
+                    <img src="uploaded:Screenshot 2025-08-08 035406.png-5b6fb5aa-ad0c-4a26-8910-3cf886d9de1f" alt="Shopify About Us Page" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-40"></div>
+                    <div class="relative text-white text-center p-4 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold">Brand Story & Copywriting</h3>
+                        <p class="text-sm">About Us Page</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
